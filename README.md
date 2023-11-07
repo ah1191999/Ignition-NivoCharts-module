@@ -79,6 +79,8 @@ When enabled, custom link tooltips are used.
 
 - `commonLinkTooltipFormat` (String): Format for link tooltips (applicable when "customLinkTooltip" is true). Available variables: {link.sourceId}, {link.targetId}, {link.value}, {link.sourceValue}, {link.targetValue}.
 
+<img src="SankeyChart.gif" alt="SankeyChart" width="100%" />
+
 #### `isInteractive` (Boolean)
 
 Determines whether interactivity is enabled for the chart (default: true).
