@@ -108,3 +108,161 @@ Determines whether interactivity is enabled for the chart (default: true).
 ## Legends
 
 For information on customizing legends, see the [Nivo Chart Legends Guide](https://nivo.rocks/guides/legends/).
+
+# GitHub Calendar Component
+
+The GitHub Calendar component allows you to create a calendar heatmap representation of data over time in Ignition. This document provides details on how to configure and use this component.
+
+## Properties
+
+#### `data` (Object)
+
+  - `day` (String): Represents the date in "YYYY-MM-DD" format.
+  - `value` (Number): Specifies the value for the corresponding date.
+
+- `from` (String)
+
+  - `default`: "2015"
+  - `description`: The start date of the chart data.
+
+- `to` (String)
+
+  - `default`: "2017"
+  - `description`: The end date of the chart data.
+
+
+#### `yearCfg` (Object)
+  
+  - `yearSpacing` (Number)
+    - `default`: 40
+    - `description`: Specifies the spacing between years in the year view.
+
+  - `yearLegendPosition` (String)
+    - `enum`: "before", "after"
+    - `default`: "before"
+    - `description`: Defines the position of the year legend relative to the year view.
+
+  - `yearLegendOffset` (Number)
+    - `default`: 10
+    - `description`: Determines the offset between the year legend and the year view.
+
+#### `monthCfg` (Object)
+
+  - `translateTo` (String)
+    - `enum`: "en", "es", "fr", "de", "ar", "cn", "none"
+    - `default`: "en"
+    - `description`: Specifies the language for translating month names.
+
+  - `monthBorderColor` (String)
+    - `format`: Color
+    - `default`: "#fff"
+    - `description`: Sets the color of the border around individual months in the month view.
+
+  - `monthBorderWidth` (Number)
+    - `default`: 1
+    - `description`: Controls the width of the border around individual months.
+
+  - `monthLegendOffset` (Number)
+    - `default`: 10
+    - `description`: Determines the offset between the month legend and the month view.
+
+  - `monthLegendPosition` (String)
+    - `enum`: "before", "after"
+    - `default`: "before"
+    - `description`: Defines the position of the month legend relative to the month view.
+
+  - `monthSpacing` (Number)
+    - `default`: 3
+    - `description`: Specifies the spacing between individual months in the month view.
+
+#### `dayCfg` (Object)
+
+  - `dayBorderColor` (String)
+    - `format`: Color
+    - `default`: "#0000003D"
+    - `description`: Sets the color of the border around individual days in the day view.
+
+  - `dayBorderWidth` (Number)
+    - `default`: 1
+    - `description`: Controls the width of the border around individual days.
+
+  - `daySpacing` (Number)
+    - `default`: 1
+    - `description`: Specifies the spacing between individual days in the day view.
+
+#### `chartCfg` (Object)
+
+  - `minValue`
+    - `default`: "auto"
+    - `description`: Sets the minimum value for the chart.
+
+  - `maxValue`
+    - `default`: "auto"
+    - `description`: Sets the maximum value for the chart.
+
+  - `legendFormat` (String)
+    - `default`: "{data.value} hr"
+    - `description`: Defines the format for legends within the chart.
+
+#### `chartStyle` (Object))
+
+  - `colors` (Array of Strings)
+    - `default`: ["#97e3d5", "#61cdbb", "#e8c1a0", "#f47560"]
+    - `description`: Specifies an array of color values to define the colors used in the chart.
+
+  - `emptyColor` (String)
+    - `format`: Color
+    - `default`: "#eeeeee"
+    - `description`: Sets the color used for empty or unassigned areas in the chart.
+
+  - `direction` (String)
+    - `enum`: "horizontal", "vertical"
+    - `default`: "horizontal"
+    - `description`: Defines the orientation of the chart.
+
+  - `margin` (Object)
+    - `description`: Specifies the margin or padding around the chart.
+
+  - `align` (String)
+    - `enum`: "top-left", "top-right", "top", "right", "left", "center", "bottom-left", "bottom-right", "bottom"
+    - `default`: "center"
+    - `description`: Determines the alignment of the chart within its container.
+
+  - `theme` (Object)
+    - `description`: Styling configuration for various chart elements.
+
+#### `tooltipCfg` (Object)
+
+  - `isInteractive`
+    - `default`: true
+    - `description`: Specifies whether the tooltip is interactive.
+
+  - `tooltipMode`
+    - `default`: "default"
+    - `enum`: "default", "embeddedView", "custom"
+    - `description`: Sets the mode for displaying tooltips.
+
+  - `customTooltip` (String)
+    - `default`: "{data.day}:{data.value}"
+    - `description`: Custom tooltip template with placeholders.
+
+  - `tooltipEmbeddedView` (Object)
+    - `path` (String)
+    - `useDefaultViewWidth` (Boolean)
+    - `useDefaultViewHeight` (Boolean)
+
+## Events
+
+The GitHub Calendar component supports the following events:
+
+- `onClick`
+- `onMouseEnter`
+- `onMouseLeave`
+- `onMouseMove`
+
+All of these events return an object with data like this in normal mode: {"day": "2015-07-09", "value": 66}.
+
+You can customize and configure the component using these properties, and utilize the events to enhance the interactivity of your GitHub Calendar chart in Ignition.
+
+Feel free to add any custom parameters to enhance your embedded view and chart styling based on your specific needs.
+
