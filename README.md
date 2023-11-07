@@ -1,6 +1,7 @@
 # Nivo Chart Component
 
 The Nivo Chart component allows you to create Sankey charts and GitHub calendars in Ignition. This document provides details on how to configure and use this component.
+<img src="image.png" alt="SankeyChart" width="100%" />
 
 ## Sankey Chart
 
