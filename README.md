@@ -113,6 +113,8 @@ For information on customizing legends, see the [Nivo Chart Legends Guide](https
 
 The GitHub Calendar component allows you to create a calendar heatmap representation of data over time in Ignition. This document provides details on how to configure and use this component.
 
+<img src="image2.png" alt="SankeyChart" width="100%" />
+
 ## Properties
 
 #### `data` (Object)
